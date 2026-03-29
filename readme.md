@@ -1,0 +1,1 @@
+# NODE VERSION 20 REQUIRED (DMX Cannot Run Passed v20)

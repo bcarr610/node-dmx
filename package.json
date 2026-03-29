@@ -1,0 +1,27 @@
+{
+  "name": "dmx-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": "build/index.js",
+  "scripts": {
+    "start": "node ./build/index.js",
+    "dev": "nodemon",
+    "build": "tsc",
+    "buildv1": "esbuild src/index.ts --bundle --minify --platform=node --target=node20 --outfile=build/index.js",
+    "package": "npm run build && @powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./pkg.ps1",
+    "list-midi-inputs": "node ./build/list-midi-inputs"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dmx": "^0.25.1",
+    "easymidi": "^3.1.0",
+    "nodemon": "^3.1.10"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.18",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
