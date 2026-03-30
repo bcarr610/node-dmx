@@ -7,8 +7,6 @@
     "start": "node ./build/index.js",
     "dev": "nodemon",
     "build": "tsc",
-    "buildv1": "esbuild src/index.ts --bundle --minify --platform=node --target=node20 --outfile=build/index.js",
-    "package": "npm run build && @powershell -NoProfile -ExecutionPolicy Unrestricted -Command ./pkg.ps1",
     "list-midi-inputs": "node ./build/list-midi-inputs"
   },
   "author": "",
